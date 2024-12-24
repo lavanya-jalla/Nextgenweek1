@@ -5,6 +5,9 @@ import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
 import Registration from './components/Registration';
 import Login from './components/Login';
+import './App.css';
+import './index.css';
+
 
 const App = () => {
   return (

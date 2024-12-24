@@ -20,7 +20,7 @@ const Login = () => {
     };
 
     return (
-        <div>
+        <div><center>
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -32,7 +32,7 @@ const Login = () => {
                         onChange={handleChange}
                     />
                 </label>
-                <br />
+                <br /><br />
                 <label>
                     Password:
                     <input
@@ -42,9 +42,9 @@ const Login = () => {
                         onChange={handleChange}
                     />
                 </label>
-                <br />
+                <br /><br />
                 <button type="submit">Login</button>
-            </form>
+            </form></center>
         </div>
     );
 }

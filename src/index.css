@@ -1,6 +1,6 @@
 /* index.css */
 nav {
-  background-color: #282c34;
+  background-color:rgb(117, 118, 116);
   padding: 10px;
 }
 
@@ -14,7 +14,7 @@ nav li {
 }
 
 footer {
-  background-color: #282c34;
+  background-color:rgb(117, 118, 116);
   color: white;
   text-align: center;
   padding: 10px;

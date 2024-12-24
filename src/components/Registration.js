@@ -21,7 +21,7 @@ const Registration = () => {
     };
 
     return (
-        <div>
+        <div><center>
             <h2>Register</h2>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -33,7 +33,7 @@ const Registration = () => {
                         onChange={handleChange}
                     />
                 </label>
-                <br />
+                <br /><br />
                 <label>
                     Email:
                     <input
@@ -43,7 +43,7 @@ const Registration = () => {
                         onChange={handleChange}
                     />
                 </label>
-                <br />
+                <br /><br />
                 <label>
                     Password:
                     <input
@@ -53,9 +53,9 @@ const Registration = () => {
                         onChange={handleChange}
                     />
                 </label>
-                <br />
+                <br /><br />
                 <button type="submit">Register</button>
-            </form>
+            </form></center>
         </div>
     );
 }
