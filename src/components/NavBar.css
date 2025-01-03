@@ -1,0 +1,15 @@
+
+.navBsar {
+    padding: 10px 15px;
+  }
+  
+  .nav-link {
+    color: white !important;
+    font-weight: bold;
+    margin-right: 15px;
+  }
+  
+  .nav-link:hover {
+    color: #ffc107 !important;
+  }
+  

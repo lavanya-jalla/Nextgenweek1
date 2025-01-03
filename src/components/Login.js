@@ -1,52 +1,32 @@
-import React, { useState } from 'react';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
-const Login = () => {
-    const [form, setForm] = useState({
-        email: '',
-        password: '',
-    });
+function Login() {
+  const navigate = useNavigate();
 
-    const handleChange = (e) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value,
-        });
-    };
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Add login functionality here
+    navigate("/dashboard");
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add login form submission logic here
-        console.log('User logged in:', form);
-    };
-
-    return (
-        <div><center>
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Email:
-                    <input
-                        type="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleChange}
-                    />
-                </label>
-                <br /><br />
-                <label>
-                    Password:
-                    <input
-                        type="password"
-                        name="password"
-                        value={form.password}
-                        onChange={handleChange}
-                    />
-                </label>
-                <br /><br />
-                <button type="submit">Login</button>
-            </form></center>
+  return (
+    <div className="login-page">
+      <form className="login-form" onSubmit={handleLogin}>
+        <h2>Login</h2>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email</label>
+          <input type="email" id="email" className="form-control" required />
         </div>
-    );
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">Password</label>
+          <input type="password" id="password" className="form-control" required />
+        </div>
+        <button type="submit" className="btn btn-primary w-100">Login</button>
+      </form>
+    </div>
+  );
 }
 
 export default Login;

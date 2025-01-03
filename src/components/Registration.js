@@ -1,63 +1,27 @@
-import React, { useState } from 'react';
+import React from "react";
+import "./Registration.css";
 
-const Registration = () => {
-    const [form, setForm] = useState({
-        username: '',
-        email: '',
-        password: '',
-    });
-
-    const handleChange = (e) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value,
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add form submission logic here
-        console.log('User registered:', form);
-    };
-
-    return (
-        <div><center>
-            <h2>Register</h2>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Username:
-                    <input
-                        type="text"
-                        name="username"
-                        value={form.username}
-                        onChange={handleChange}
-                    />
-                </label>
-                <br /><br />
-                <label>
-                    Email:
-                    <input
-                        type="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleChange}
-                    />
-                </label>
-                <br /><br />
-                <label>
-                    Password:
-                    <input
-                        type="password"
-                        name="password"
-                        value={form.password}
-                        onChange={handleChange}
-                    />
-                </label>
-                <br /><br />
-                <button type="submit">Register</button>
-            </form></center>
+function Registration() {
+  return (
+    <div className="registration-page">
+      <form className="registration-form">
+        <h2>Register</h2>
+        <div className="mb-3">
+          <label htmlFor="username" className="form-label">Username</label>
+          <input type="text" id="username" className="form-control" required />
         </div>
-    );
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email</label>
+          <input type="email" id="email" className="form-control" required />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">Password</label>
+          <input type="password" id="password" className="form-control" required />
+        </div>
+        <button type="submit" className="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  );
 }
 
 export default Registration;

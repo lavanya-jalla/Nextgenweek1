@@ -1,15 +1,12 @@
-import React from 'react';
+import React from "react";
+import "./Footer.css";
 
-const Footer = () => {
-    return (
-       <center>
-       <footer>
-            <p>
-                
-                
-                © 2024 Dynamic Collab Company. All rights reserved.</p>
-        </footer></center>
-    );
+function Footer() {
+  return (
+    <footer className="footer bg-dark text-white text-center py-3">
+      &copy; 2024 Dynamic Collab. All Rights Reserved.
+    </footer>
+  );
 }
 
 export default Footer;
